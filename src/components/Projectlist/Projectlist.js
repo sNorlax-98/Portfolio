@@ -1,9 +1,9 @@
-import React from 'react'
-import '../../pages/style.css';
+import React from "react";
+import "../../pages/style.css";
 import ProjectCard from "./ProjectCard";
-import { Container, Row, Col } from 'react-bootstrap'
-import useradminpanel from '../../Assets/Capture.PNG'
-
+import { Container, Row, Col } from "react-bootstrap";
+import todo_list from "../../Assets/Capture.PNG";
+import search_pokemon from "../../Assets/search_pokemon.PNG";
 
 function Projectlist() {
   return (
@@ -13,17 +13,28 @@ function Projectlist() {
           <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
             <Col md={4} className="project-card">
               <ProjectCard
-                imgPath={useradminpanel}
+                imgPath={todo_list}
                 isBlog={false}
                 title="todo-list"
                 description="App created in react.js and MUI."
-                ghLink="https://friendly-bonbon-ee8c35.netlify.app/"
+                ghLink="https://todo-list-0-01.netlify.app/"
+              />
+            </Col>
+          </Row>
+          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+            <Col md={4} className="project-card">
+              <ProjectCard
+                imgPath={search_pokemon}
+                isBlog={false}
+                title="Pokedex App"
+                description="App created in react.js and Poki api."
+                ghLink="https://todo-list-0-01.netlify.app/"
               />
             </Col>
           </Row>
         </Container>
       </Container>
     </div>
-  )
+  );
 }
-export default Projectlist
+export default Projectlist;
